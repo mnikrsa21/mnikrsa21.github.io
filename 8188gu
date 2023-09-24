@@ -1,0 +1,36 @@
+include $(TOPDIR)/rules.mk
+include $(INCLUDE_DIR)/kernel.mk
+include $(INCLUDE_DIR)/kernel-defaults.mk
+
+PKG_NAME:=RTL8188GU
+PKG_VERSION=2016-10-20-$(PKG_SOURCE_VERSION)
+PKG_RELEASE:=1
+
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=https://github.com/McMCCRU/rtl8188gu.git
+PKG_SOURCE_VERSION:=c2b79fc1c085d9fc4a70ac0f5bc730ec929c562b
+PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_SOURCE_VERSION)
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_SOURCE_VERSION).tar.gz
+
+
+PKG_BUILD_DIR:=$(KERNEL_BUILD_DIR)/$(PKG_NAME)-$(PKG_SOURCE_VERSION)
+
+include $(INCLUDE_DIR)/package.mk
+
+define KernelPackage/rtl8188gu
+  SUBMENU:=Wireless Drivers
+  TITLE:=Driver for RTL8188GU wireless chipsets
+  DEPENDS:= @USB_SUPPORT +kmod-usb-core +kmod-mac80211 +kmod-cfg80211
+  VERSION:=$(LINUX_VERSION)+$(PKG_VERSION)
+  FILES:= $(PKG_BUILD_DIR)/8188gu.ko
+#  AUTOLOAD:=$(call AutoLoad,rtl8814au)
+endef
+
+define Build/Compile
+        $(MAKE) $(KERNEL_MAKEOPTS) M=$(PKG_BUILD_DIR) \
+                USER_EXTRA_CFLAGS=""-D_LTNUX_BYTEORDER_SWAB_H -DCONFIG_BIG_ENDIAN -DCONFIG_TOCTL_CFG80211 -DRTH_USE_CFG80211 STA EVENT" \
+                CONFIG_RTL8710B=y CONFIG RTL8188GU=m \
+                modules
+endef
+
+$(eval $(call KernelPackage,rtl8188gu))
