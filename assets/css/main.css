@@ -1,0 +1,46 @@
+body {
+    background-image: url("../images/sad-nawpic.png");
+/*     background-image: url('https://mnikrsa.com/assets/img/sad.png');*/
+    background-color: black;
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: top center;
+}
+img[alt="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+    display:none;
+}
+img[alt="www.000webhost.com"]{
+    display:none;
+}
+
+/* Light mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    /*background-image: none; /* No background image for light mode */*/
+    background-color: white; /* Background color for light mode */
+    color: white; /* Text color for light mode */
+  }
+}
+
+
+#footer{
+       width: 100%;
+       height: 50px;
+       padding-left: 10px;
+       line-height: 50px;
+       position: absolute;
+       bottom: 0px;
+       text-transform: none;
+       text-align: center
+       color: inherit; /* Inherits color from body */
+}
+font#text, h3, p{
+        white-space: pre;
+        text-transform: none;
+        font-family: "Courier New";
+        font-weight: bold;
+        color: white; /* Inherits color from body */
+}
+html, body{
+        overflow: hidden;
+}
