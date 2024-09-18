@@ -15,7 +15,7 @@
             width: 200px; /* Sesuaikan lebar */
         }
 
-        #result, #pp, p	 {
+        #result, #pp, p  {
             margin: 2px 0; /* Jarak antar baris */
             text-align: left; /* Rata kiri */
         }
@@ -29,6 +29,7 @@
         function displayValues() {
             // Ambil nilai input IP address
             var inputIp = document.getElementById("ipInput").value;
+            var orderNo = document.getElementById("orderInput").value; // Ambil nilai input nomor pesanan
 
             // Validasi jika IP tidak diisi
             if (inputIp === "") {
@@ -38,6 +39,9 @@
 
             // Set nilai yang diambil ke element yang ditampilkan
             document.getElementById("ipDisplay").textContent = inputIp;
+
+            // Tampilkan nomor pesanan di paragraf
+            document.getElementById("orderMessage").textContent = "Kak minta tolong ubahin status pesanannya menjadi dikirim, soalnya produk digital NO PESANAN : " + orderNo + " . berikut bukti produk sudah diterima pembeli :";
         }
     </script>
 </head>
@@ -46,6 +50,13 @@
 
     <label for="ipInput">Masukkan IP Address:</label>
     <input type="text" id="ipInput" placeholder="Masukkan IP">
+    <br><br>
+
+    <!-- Tambahan: Input nomor pesanan -->
+    <label for="orderInput">Masukkan No Pesanan:</label>
+    <input type="text" id="orderInput" placeholder="Masukkan No Pesanan">
+    <br><br>
+
     <button onclick="displayValues()">Submit</button><br><br><br>
 
     <div id="result">
@@ -61,6 +72,9 @@
         <p class="colon">:</p>
         <p class="value" id="passwordDisplay">@Igcloud16</p>
     </div>
-    <p id="pp">pake i besar</p>
+<p id="pp">pake i besar</p><br><br><br>
+    <!-- Tambahan: Paragraf untuk menampilkan nomor pesanan -->
+    <p id="orderMessage">Kak minta tolong ubahin status pesanannya menjadi dikirim, soalnya produk digital NO PESANAN : </p>
+
 </body>
 </html>
