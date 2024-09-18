@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <title>Form Input</title>
+    <style>
+        /* Container untuk hasil yang diratakan */
+        #result {
+            font-family:Ubuntu;
+            display: grid;
+            grid-template-columns: 70px 10px auto; /* Kolom untuk label, titik dua, dan nilai */
+            column-gap: 0px; /* Jarak antar kolom */
+            width: 200px; /* Sesuaikan lebar */
+        }
+
+        #result, #pp, p	 {
+            margin: 2px 0; /* Jarak antar baris */
+            text-align: left; /* Rata kiri */
+        }
+
+        /* Atur label, titik dua, dan nilai agar semua rata kiri */
+        .label, .colon, .value {
+            text-align: left;
+        }
+    </style>
+    <script>
+        function displayValues() {
+            // Ambil nilai input IP address
+            var inputIp = document.getElementById("ipInput").value;
+
+            // Validasi jika IP tidak diisi
+            if (inputIp === "") {
+                alert("Masukkan IP Address terlebih dahulu!");
+                return;
+            }
+
+            // Set nilai yang diambil ke element yang ditampilkan
+            document.getElementById("ipDisplay").textContent = inputIp;
+        }
+    </script>
+</head>
+<body>
+    <h2>Form Input</h2>
+
+    <label for="ipInput">Masukkan IP Address:</label>
+    <input type="text" id="ipInput" placeholder="Masukkan IP">
+    <button onclick="displayValues()">Submit</button><br><br><br>
+
+    <div id="result">
+        <p class="label">IP</p>
+        <p class="colon">:</p>
+        <p class="value" id="ipDisplay">isi ip</p>
+
+        <p class="label">User</p>
+        <p class="colon">:</p>
+        <p class="value" id="userDisplay">Root</p>
+
+        <p class="label">Password</p>
+        <p class="colon">:</p>
+        <p class="value" id="passwordDisplay">@Igcloud16</p>
+    </div>
+    <p id="pp">pake i besar</p>
+</body>
+</html>
