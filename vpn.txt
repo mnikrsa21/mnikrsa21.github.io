@@ -1,0 +1,57 @@
+
+- name: howdy_he1
+  server: sg1-trojan.bonds.id
+  port: 443
+  type: trojan
+  password: ca391ec0-698c-11ef-a5c4-1239d0255272
+  skip-cert-verify: true
+  sni: token-media-vidio-com.akamaized.net
+  network: tcp
+  udp: true
+
+- name: howdy_he2
+  server: sg2-trojan.bonds.id
+  port: 443
+  type: trojan
+  password: 489dc270-7265-11ef-a1c2-1239d0255272
+  skip-cert-verify: true
+  sni: token-media-vidio-com.akamaized.net
+  network: tcp
+  udp: true
+
+- name: howdy_he3
+  server: sg3-trojan.bonds.id
+  port: 443
+  type: trojan
+  password: 716031d0-7265-11ef-874a-1239d0255272
+  skip-cert-verify: true
+  sni: token-media-vidio-com.akamaized.net
+  network: tcp
+  udp: true
+
+- name: bshhs
+  server: 104.22.5.240
+  type: vless
+  port: 80
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: false
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: englishtest-stage-7.duolingo.com.zvpn.biz.id
+  udp: true
+
+- name: cf-trojan
+  server: 104.16.241.118
+  port: 443
+  type: trojan
+  password: x
+  skip-cert-verify: true
+  sni: trojan.xstore.eu.org
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: trojan.xstore.eu.org
+  udp: true
