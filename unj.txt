@@ -85,7 +85,7 @@ uii
 20UNJ8087 : Budiarto_7317167489@mhs.unj.ac.id		
 20UNJ8129 : Chaerunnisa_7317157805@mhs.unj.ac.id		
 20UNJ8252 : DayuRetnoPuspita_7317167490@mhs.unj.ac.id		
-20UNJ8298 : DemaTesniyadi_7317110551@mhs.unj.ac.id		
+√√ 20UNJ8298 : DemaTesniyadi_7317110551@mhs.unj.ac.id		
 19UNJ24287 : endangsulistijani_7317140105@mhs.unj.ac.id		
 19UNJ24316 : erlinasaota_7317167362@mhs.unj.ac.id		
 19UNJ24294 : erni_7317140311@mhs.unj.ac.id		
@@ -140,7 +140,8 @@ Ffca3712 : mahiraalkeisaputrisyahbana_1210621016@mhs.unj.ac.id
 Hkvx9607 : NadhiaSulistyana_1210620003@mhs.unj.ac.id		
 19UNJ4898 : nandaseptianiputri_1210618040@mhs.unj.ac.id		
 Jhez9829 : NataliKristantiPrabowo_1210620046@mhs.unj.ac.id		
-19UNJ4831 : nelinnovalin_1210617034@mhs.unj.ac.id		
+
+√√ 19UNJ4831 : nelinnovalin_1210617034@mhs.unj.ac.id		
 19UNJ4900 : nidarhahimahrhamadhani_1210618042@mhs.unj.ac.id		
 Tpsz3022 : nikenpuspalarasati_1210621046@mhs.unj.ac.id		
 Dxga5979 : nisrinaqanitatuasamu_1210621061@mhs.unj.ac.id		
